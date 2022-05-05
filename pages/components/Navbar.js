@@ -15,6 +15,7 @@ import { useState } from "react";
 
 const Nav = styled.nav`
   position: fixed;
+  z-index: 55;
   bottom: 2rem;
   width: 350px;
   left: calc(50% - 175px);

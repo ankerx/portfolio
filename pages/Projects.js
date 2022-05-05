@@ -1,5 +1,8 @@
+import Image from "next/image";
 import styled from "styled-components";
-
+import bigweirdo from "../public/images/bigweirdos.png";
+import cryptoweb from "../public/images/crypto.png";
+import workoutapp from "../public/images/workoutapp.png";
 const Section = styled.section`
   display: flex;
   flex-direction: column;
@@ -18,10 +21,8 @@ const StyledH2 = styled.h2`
 `;
 const ImageBox = styled.div`
   width: 80%;
-  height: 10rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   border: 1px solid rgba(24, 138, 236, 1);
-  background: gray;
 `;
 const Text = styled.p`
   font-size: 0.8rem;
@@ -41,12 +42,12 @@ const StyledLink = styled.a`
   position: relative;
   background: rgba(24, 138, 236, 1);
   padding: 0.8rem 1.6rem;
+  margin: 0.5rem 0;
   font-size: 1rem;
   cursor: pointer;
   color: white;
   border: none;
   border-radius: 8px;
-  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
 
   &:after {
     position: absolute;
@@ -65,15 +66,43 @@ const StyledLink = styled.a`
     transform: translate(0);
   }
 `;
+const Background = styled.div`
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  right: 3rem;
+  top: 3rem;
+  background: #60a5fa;
+  filter: blur(70px);
+`;
+const Background2 = styled.div`
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  left: 2rem;
+  bottom: 7rem;
+  background: #60a5fa;
+  filter: blur(70px);
+`;
 function Projects() {
   return (
     <Section>
+      <Background></Background>
+      <Background2></Background2>
       <StyledHeading>Projects</StyledHeading>
       <StyledH2>
         Some of my projects that I have been working on last time
       </StyledH2>
       <Container>
-        <ImageBox></ImageBox>
+        <ImageBox>
+          <Image
+            src={cryptoweb}
+            // width="200px"
+            // height="100px"
+            alt="Picture of the website"
+            layout="responsive"
+          />
+        </ImageBox>
         <Text>
           Cryptocurrency dashboard. This react app is created to see currently
           crypto prices by fetching data from coingecko API. You can check
@@ -85,9 +114,17 @@ function Projects() {
           target="_blank"
           href="https://github.com/ankerx/crypto-chart"
         >
-          See more
+          View more
         </StyledLink>
-        <ImageBox></ImageBox>
+        <ImageBox>
+          <Image
+            src={workoutapp}
+            // width="200px"
+            // height="100px"
+            alt="Picture of the website"
+            layout="responsive"
+          />
+        </ImageBox>
         <Text>
           App created to track workout data. You can add, edit and delete sets,
           reps and weight. Data of all workout, for example how many kilograms u
@@ -97,16 +134,24 @@ function Projects() {
           target="_blank"
           href="https://github.com/ankerx/workout-app"
         >
-          See more
+          View more
         </StyledLink>
-        <ImageBox></ImageBox>
+        <ImageBox>
+          <Image
+            src={bigweirdo}
+            // width="200px"
+            // height="100px"
+            alt="Picture of the website"
+            layout="responsive"
+          />
+        </ImageBox>
         <Text>Website presenting NFT collection.</Text>
 
         <StyledLink
           target="_blank"
           href="https://github.com/ankerx/big-weirdos"
         >
-          See more
+          View more
         </StyledLink>
       </Container>
     </Section>

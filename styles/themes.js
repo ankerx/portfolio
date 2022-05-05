@@ -13,6 +13,14 @@ export const GlobalStyles = createGlobalStyle`
   h1,h2,h3,h4,h5,h6{
     margin: .7rem 0
   }
+  input {
+    font-family: 'Space Grotesk', sans-serif;
+    padding:.4rem;
+  }
+  label {
+    margin-top: 1rem;
+     margin-bottom: 0.2rem;
+  }
 `;
 
 export const lightTheme = {

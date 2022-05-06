@@ -3,6 +3,8 @@ import styled from "styled-components";
 import bigweirdo from "../public/images/bigweirdos.png";
 import cryptoweb from "../public/images/crypto.png";
 import workoutapp from "../public/images/workoutapp.png";
+import { useState, useEffect } from "react";
+
 const Section = styled.section`
   display: flex;
   flex-direction: column;
@@ -10,25 +12,52 @@ const Section = styled.section`
   min-height: 90vh;
   margin: 0 1.5rem;
   text-align: center;
+  @media (min-width: 768px) {
+    margin: 0 5rem;
+  }
 `;
 const StyledHeading = styled.h1`
-  // font-size: 1.8rem;
+  @media (min-width: 1024px) {
+    font-size: 1.8rem;
+  }
 `;
 const StyledH2 = styled.h2`
   font-size: 1rem;
   margin: 1rem;
+  margin-bottom: 3rem;
   font-weight: 400;
+  @media (min-width: 1024px) {
+    font-size: 1.2rem;
+  }
 `;
+
+const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  width: 100%;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+`;
+
 const ImageBox = styled.div`
-  width: 80%;
-  margin-top: 2rem;
   border: 1px solid rgba(24, 138, 236, 1);
+  /* position: relative; */
+  box-shadow: 0.5rem 0.5rem 0.4rem 0.4rem rgba(24, 138, 236, 0.1);
 `;
 const Text = styled.p`
   font-size: 0.8rem;
   margin: 1.5rem;
+  margin-bottom: 3rem;
   line-height: 1.4rem;
   font-weight: 200;
+
+  @media (min-width: 1024px) {
+    font-size: 1rem;
+    width: 40vw;
+  }
 `;
 const Container = styled.div`
   display: flex;
@@ -37,6 +66,9 @@ const Container = styled.div`
   width: 100%;
   margin: 0 1rem;
   padding-bottom: 8rem;
+
+  @media (min-width: 768px) {
+  }
 `;
 const StyledLink = styled.a`
   position: relative;
@@ -74,6 +106,12 @@ const Background = styled.div`
   top: 3rem;
   background: #60a5fa;
   filter: blur(70px);
+  @media (min-width: 1024px) {
+    right: 8rem;
+    width: 6rem;
+    height: 6rem;
+    filter: blur(100px);
+  }
 `;
 const Background2 = styled.div`
   position: absolute;
@@ -83,6 +121,17 @@ const Background2 = styled.div`
   bottom: 7rem;
   background: #60a5fa;
   filter: blur(70px);
+  @media (min-width: 1024px) {
+    left: 8rem;
+    width: 6rem;
+    height: 6rem;
+    filter: blur(120px);
+  }
+`;
+const Div = styled.div`
+  @media (min-width: 1024px) {
+    order: -1;
+  }
 `;
 function Projects() {
   return (
@@ -94,65 +143,73 @@ function Projects() {
         Some of my projects that I have been working on last time
       </StyledH2>
       <Container>
-        <ImageBox>
-          <Image
-            src={cryptoweb}
-            // width="200px"
-            // height="100px"
-            alt="Picture of the website"
-            layout="responsive"
-          />
-        </ImageBox>
-        <Text>
-          Cryptocurrency dashboard. This react app is created to see currently
-          crypto prices by fetching data from coingecko API. You can check
-          prices of top 10 cryptocurrencies When you click on particular coin
-          you will be able to see some infromation about it and also chart
-          displaying price data.
-        </Text>
-        <StyledLink
-          target="_blank"
-          href="https://github.com/ankerx/crypto-chart"
-        >
-          View more
-        </StyledLink>
-        <ImageBox>
-          <Image
-            src={workoutapp}
-            // width="200px"
-            // height="100px"
-            alt="Picture of the website"
-            layout="responsive"
-          />
-        </ImageBox>
-        <Text>
-          App created to track workout data. You can add, edit and delete sets,
-          reps and weight. Data of all workout, for example how many kilograms u
-          lifted, is calculated.
-        </Text>
-        <StyledLink
-          target="_blank"
-          href="https://github.com/ankerx/workout-app"
-        >
-          View more
-        </StyledLink>
-        <ImageBox>
-          <Image
-            src={bigweirdo}
-            // width="200px"
-            // height="100px"
-            alt="Picture of the website"
-            layout="responsive"
-          />
-        </ImageBox>
-        <Text>Website presenting NFT collection.</Text>
-
-        <StyledLink
-          target="_blank"
-          href="https://github.com/ankerx/big-weirdos"
-        >
-          View more
-        </StyledLink>
+        <Box>
+          <ImageBox>
+            <Image
+              src={workoutapp}
+              alt="Picture of the website"
+              width={520}
+              height={270}
+            />
+          </ImageBox>
+          <div>
+            <Text>
+              App created to track workout data. You can add, edit and delete
+              sets, reps and weight. Data of all workout, for example how many
+              kilograms u lifted, is calculated.
+            </Text>
+            <StyledLink
+              target="_blank"
+              href="https://github.com/ankerx/workout-app"
+            >
+              View more
+            </StyledLink>
+          </div>
+        </Box>
+        <Box>
+          <ImageBox>
+            <Image
+              src={cryptoweb}
+              alt="Picture of the website"
+              width={520}
+              height={270}
+            />
+          </ImageBox>
+          <Div>
+            <Text>
+              Cryptocurrency dashboard. This react app is created to see
+              currently crypto prices by fetching data from coingecko API. You
+              can check prices of top 10 cryptocurrencies When you click on
+              particular coin you will be able to see some infromation about it
+              and also chart displaying price data.
+            </Text>
+            <StyledLink
+              target="_blank"
+              href="https://github.com/ankerx/crypto-chart"
+            >
+              View more
+            </StyledLink>
+          </Div>
+        </Box>
+        <Box>
+          <ImageBox>
+            <Image
+              src={bigweirdo}
+              alt="Picture of the website"
+              width={520}
+              height={270}
+            />
+          </ImageBox>
+          <div>
+            <Text>Website presenting NFT collection.</Text>
+            <StyledLink
+              target="_blank"
+              href="https://github.com/ankerx/big-weirdos"
+            >
+              View more
+            </StyledLink>
+          </div>
+        </Box>
       </Container>
     </Section>
   );

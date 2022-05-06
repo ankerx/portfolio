@@ -16,6 +16,12 @@ const Background = styled.div`
   top: 3rem;
   background: #60a5fa;
   filter: blur(70px);
+  @media (min-width: 1024px) {
+    right: 8rem;
+    width: 6rem;
+    height: 6rem;
+    filter: blur(100px);
+  }
 `;
 const Background2 = styled.div`
   position: absolute;
@@ -25,6 +31,12 @@ const Background2 = styled.div`
   bottom: 7rem;
   background: #60a5fa;
   filter: blur(70px);
+  @media (min-width: 1024px) {
+    left: 8rem;
+    width: 6rem;
+    height: 6rem;
+    filter: blur(120px);
+  }
 `;
 function About() {
   return (

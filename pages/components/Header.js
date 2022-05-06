@@ -16,18 +16,31 @@ const Box = styled.div`
 const StyledText = styled.p`
   font-size: 1.4rem;
   margin-bottom: 0;
+  @media (min-width: 1024px) {
+    font-size: 1.6rem;
+  }
 `;
 const StyledHeading = styled.h2`
-  font-size: 1.8rem;
+  font-size: 1.7rem;
+  @media (min-width: 1024px) {
+    font-size: 2.1rem;
+  }
 `;
 const StyledDesc = styled.h3`
   font-size: 1rem;
   font-weight: 300;
   margin-bottom: 3rem;
+  @media (min-width: 1024px) {
+    font-size: 1.3rem;
+  }
 `;
 const StyledH1 = styled.h1`
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   margin-bottom: 2.5rem;
+  @media (min-width: 1024px) {
+    font-size: 2.1rem;
+    margin-bottom: 3rem;
+  }
 `;
 
 const StyledButton = styled.button`
@@ -56,6 +69,9 @@ const StyledButton = styled.button`
   &:hover:after {
     transform: translate(0);
   }
+  @media (min-width: 1024px) {
+    font-size: 1.1rem;
+  }
 `;
 const Background = styled.div`
   position: absolute;
@@ -65,6 +81,12 @@ const Background = styled.div`
   top: 3rem;
   background: #60a5fa;
   filter: blur(70px);
+  @media (min-width: 1024px) {
+    right: 8rem;
+    width: 6rem;
+    height: 6rem;
+    filter: blur(100px);
+  }
 `;
 const Background2 = styled.div`
   position: absolute;
@@ -74,6 +96,12 @@ const Background2 = styled.div`
   bottom: 7rem;
   background: #60a5fa;
   filter: blur(70px);
+  @media (min-width: 1024px) {
+    left: 8rem;
+    width: 6rem;
+    height: 6rem;
+    filter: blur(120px);
+  }
 `;
 function Header() {
   return (
@@ -84,10 +112,7 @@ function Header() {
         <StyledText>Hello</StyledText>
         <StyledHeading>My name is Sebastian</StyledHeading>
         <StyledH1>I am Frontend Developer</StyledH1>
-        <StyledDesc>
-          Let me help you get your website on the next level!
-        </StyledDesc>
-
+        <StyledDesc>I take every website on the next level!</StyledDesc>
         <Link href="/Projects">
           <StyledButton>See my projects</StyledButton>
         </Link>

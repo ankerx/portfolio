@@ -6,9 +6,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  position: relative;
+  width: 50rem;
   margin-bottom: 5rem;
+  @media (min-width: 500px) {
+  }
 `;
 const StyledText = styled.p`
   font-size: 1rem;
@@ -30,7 +31,11 @@ const Box = styled.div`
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  width: 80vw;
+
+  max-width: 528px;
+  /* @media (min-width: 1024px) {
+    max-width: 50vw;
+  } */
 `;
 const StyledInput = styled.input`
   margin-top: 0.3rem;
@@ -78,7 +83,7 @@ const StyledInputBtn = styled.button`
   }
 `;
 const StyledHeading = styled.h1``;
-export const ContactUs = () => {
+function Email() {
   const form = useRef();
   const [formErrors, setFormErrors] = useState({});
   const [values, setValues] = useState({
@@ -198,4 +203,6 @@ export const ContactUs = () => {
       )}
     </Container>
   );
-};
+}
+
+export default Email;

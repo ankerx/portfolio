@@ -19,8 +19,8 @@ export const GlobalStyles = createGlobalStyle`
   }
   label {
     margin-top: 1rem;
-     margin-bottom: 0.2rem;
   }
+
 `;
 
 export const lightTheme = {

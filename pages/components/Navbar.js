@@ -29,6 +29,10 @@ const Nav = styled.nav`
     left: calc(50% - 200px);
     padding: 0.8rem 1.6rem;
   }
+  @media (max-width: 370px) {
+    width: 300px;
+    left: calc(50% - 150px);
+  }
 `;
 const StyledListItem = styled.li`
   background: ${(props) => props.theme.navBody};
@@ -47,6 +51,10 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   transition: all 0.1s ease-in;
   &:hover {
     transform: scale(0.9);
+  }
+  @media (max-width: 370px) {
+    width: 1.5rem;
+    height: 1.5rem;
   }
   @media (min-width: 1024px) {
   }

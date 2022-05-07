@@ -11,11 +11,7 @@ const Text = styled.h2`
   }
 `;
 function Logo() {
-  return <Text>Sebx.</Text>;
+  return <Text className="logo">Sebx.</Text>;
 }
 
 export default Logo;
-
-// SERVICE = `service_hplfmds`,
-// TEMPLATE = `template_9kh41ws`,
-// KEY = `3zUcfPz9ZJuYCasbt`,

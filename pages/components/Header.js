@@ -98,9 +98,9 @@ const Background2 = styled.div`
   filter: blur(70px);
   @media (min-width: 1024px) {
     left: 8rem;
-    width: 6rem;
-    height: 6rem;
-    filter: blur(120px);
+    width: 7rem;
+    height: 7rem;
+    filter: blur(100px);
   }
 `;
 function Header() {
@@ -112,7 +112,7 @@ function Header() {
         <StyledText>Hello</StyledText>
         <StyledHeading>My name is Sebastian</StyledHeading>
         <StyledH1>I am Frontend Developer</StyledH1>
-        <StyledDesc>I take every website on the next level!</StyledDesc>
+        <StyledDesc>I take every website on next level!</StyledDesc>
         <Link href="/Projects">
           <StyledButton>See my projects</StyledButton>
         </Link>

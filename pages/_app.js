@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <Head>
-        <title>My personal website</title>
+        <title>Sebx - Frontend Developer</title>
         <meta
           name="description"
           content="This is a desription for My Next App"

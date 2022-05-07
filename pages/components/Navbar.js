@@ -21,17 +21,23 @@ const Nav = styled.nav`
   left: calc(50% - 175px);
   background: ${(props) => props.theme.body};
   padding: 0.5rem 1rem;
-  // margin: 0 1rem;
   border: 1px solid #374151;
   box-shadow: -1rem 1rem 3rem rgba(38, 50, 56, 0.5);
   border-radius: 16px;
+  @media (min-width: 1024px) {
+    width: 400px;
+    left: calc(50% - 200px);
+    padding: 0.8rem 1.6rem;
+  }
 `;
 const StyledListItem = styled.li`
   background: ${(props) => props.theme.navBody};
   padding: 0.3rem;
-  margin-right: 0.7rem;
   text-decoration: none;
   border-radius: 8px;
+  @media (min-width: 1024px) {
+    padding: 0.4rem 0.5rem;
+  }
 `;
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   width: 1.8rem;
@@ -41,6 +47,8 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   transition: all 0.1s ease-in;
   &:hover {
     transform: scale(0.9);
+  }
+  @media (min-width: 1024px) {
   }
 `;
 const StyledLink = styled.a`
@@ -54,6 +62,7 @@ const StyledLink = styled.a`
 const StyledList = styled.ul`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   list-style: none;
   padding: 0;
   margin: 0;

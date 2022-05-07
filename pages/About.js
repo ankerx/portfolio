@@ -73,22 +73,22 @@ function About() {
       <Container>
         <Box>
           <Text>
-            I am a Frontend Developer from Poland. I have serious passion about
-            making websites. I am learning new things everyday and this is what
-            I like the most in programming world - you never stop learning.
+            I am a Frontend Developer from Poland. I have a serious passion for
+            making websites. I am learning new things every day and this is what
+            I like the most in the programming world - you never stop learning.
           </Text>
         </Box>
         <Box>
           <Text>
-            When I am not coding I spend most of the time on the gym. For over 7
-            years I was in national team, sport gave me a lot of benefits and
-            shaped my character. Very ambitous and well-organised person, that
-            always keeps forward.
+            When I am not coding I spend most of the time in the gym. For over 7
+            years I was in the national team, sport gave me a lot of benefits
+            and shaped my character. Very ambitious and well-organised person,
+            that always keeps forward.
           </Text>
         </Box>
         <Box>
           <H3>Technology I use:</H3>
-          <Text>HTML, CSS/SCSS, JAVSCRIPT, REACT, NEXTJS </Text>
+          <Text>HTML, CSS/SCSS, JAVASCRIPT, REACT, NEXTJS </Text>
         </Box>
       </Container>
     </Section>

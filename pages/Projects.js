@@ -140,7 +140,7 @@ function Projects() {
       <Background2></Background2>
       <StyledHeading>Projects</StyledHeading>
       <StyledH2>
-        Some of my projects that I have been working on last time
+        Some of the projects that I have been working on last time
       </StyledH2>
       <Container>
         <Box>
@@ -155,8 +155,8 @@ function Projects() {
           <div>
             <Text>
               App created to track workout data. You can add, edit and delete
-              sets, reps and weight. Data of all workout, for example how many
-              kilograms u lifted, is calculated.
+              sets, reps, and weight. Data of all workouts, for example, how
+              many kilograms u lifted, is calculated.
             </Text>
             <StyledLink
               target="_blank"
@@ -177,11 +177,11 @@ function Projects() {
           </ImageBox>
           <Div>
             <Text>
-              Cryptocurrency dashboard. This react app is created to see
-              currently crypto prices by fetching data from coingecko API. You
-              can check prices of top 10 cryptocurrencies When you click on
-              particular coin you will be able to see some infromation about it
-              and also chart displaying price data.
+              Cryptocurrency dashboard. This react app is created to see current
+              crypto prices by fetching data from coingecko API. You can check
+              the prices of the top 10 cryptocurrencies. By clicking on a
+              particular coin you can see some information about it and also a
+              chart displaying price data.
             </Text>
             <StyledLink
               target="_blank"

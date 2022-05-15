@@ -3,6 +3,7 @@ import {
   BackgroundGradientBottom,
   BackgroundGradientTop,
 } from "../../styles/globalStyles";
+import Button from "../UI/Button/Button";
 
 import {
   StyledHeader,
@@ -11,7 +12,6 @@ import {
   StyledHeading,
   StyledDescription,
   StyledH1,
-  StyledButton,
 } from "./styledHeader";
 
 function Header() {
@@ -27,7 +27,7 @@ function Header() {
           I take every website on next level!
         </StyledDescription>
         <Link href="/Projects">
-          <StyledButton>See my projects</StyledButton>
+          <Button>See my projects</Button>
         </Link>
       </Box>
     </StyledHeader>

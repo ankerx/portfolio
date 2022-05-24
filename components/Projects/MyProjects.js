@@ -17,7 +17,8 @@ import {
   StyledLink,
   Text,
 } from "./StyledProjects";
-import { getPosts } from "../../services";
+import Project from "./Project";
+
 function MyProjects({ posts }) {
   console.log(posts);
   return (
@@ -29,7 +30,16 @@ function MyProjects({ posts }) {
         Some of the projects that I have been working on last time
       </StyledH2>
       <Container>
-        <Box>
+        {posts &&
+          posts.map((post) => (
+            <Project
+              key={post.id}
+              src={post.image.url}
+              desc={post.description}
+              link={post.link}
+            />
+          ))}
+        {/* <Box>
           <ImageBox>
             <Image
               src={workoutapp}
@@ -95,18 +105,10 @@ function MyProjects({ posts }) {
               View more
             </StyledLink>
           </div>
-        </Box>
+        </Box> */}
       </Container>
     </Section>
   );
 }
 
 export default MyProjects;
-
-export async function getStaticProps() {
-  const posts = await getPosts();
-
-  return {
-    props: { posts },
-  };
-}

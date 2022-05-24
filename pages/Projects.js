@@ -1,11 +1,20 @@
 import MyProjects from "../components/Projects/MyProjects";
-
-function Projects() {
+import { getPosts } from "../services";
+function Projects({ posts }) {
+  console.log(posts);
   return (
     <div>
-      <MyProjects />
+      <MyProjects posts={posts} />
     </div>
   );
 }
 
 export default Projects;
+
+export async function getStaticProps() {
+  const posts = await getPosts();
+
+  return {
+    props: { posts },
+  };
+}

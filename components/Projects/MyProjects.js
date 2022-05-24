@@ -4,7 +4,6 @@ import {
   BackgroundGradientTop,
 } from "../../styles/globalStyles";
 import bigweirdo from "../../public/images/bigweirdos.png";
-// import bigweirdo from "../public/images/bigweirdos.png";
 import cryptoweb from "../../public/images/crypto.png";
 import workoutapp from "../../public/images/workoutapp.png";
 import {
@@ -18,8 +17,9 @@ import {
   StyledLink,
   Text,
 } from "./StyledProjects";
-
-function MyProjects() {
+import { getPosts } from "../../services";
+function MyProjects({ posts }) {
+  console.log(posts);
   return (
     <Section>
       <BackgroundGradientTop></BackgroundGradientTop>
@@ -102,3 +102,11 @@ function MyProjects() {
 }
 
 export default MyProjects;
+
+export async function getStaticProps() {
+  const posts = await getPosts();
+
+  return {
+    props: { posts },
+  };
+}

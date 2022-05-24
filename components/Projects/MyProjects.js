@@ -1,22 +1,8 @@
-import Image from "next/image";
 import {
   BackgroundGradientBottom,
   BackgroundGradientTop,
 } from "../../styles/globalStyles";
-import bigweirdo from "../../public/images/bigweirdos.png";
-import cryptoweb from "../../public/images/crypto.png";
-import workoutapp from "../../public/images/workoutapp.png";
-import {
-  Box,
-  Container,
-  Div,
-  ImageBox,
-  Section,
-  StyledH2,
-  StyledHeading,
-  StyledLink,
-  Text,
-} from "./StyledProjects";
+import { Container, Section, StyledH2, StyledHeading } from "./StyledProjects";
 import Project from "./Project";
 
 function MyProjects({ posts }) {

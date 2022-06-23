@@ -1,8 +1,5 @@
 import { Box, ImageBox, StyledLink, Text } from "./StyledProjects";
 import Image from "next/image";
-import bigweirdo from "../../public/images/bigweirdos.png";
-import cryptoweb from "../../public/images/crypto.png";
-import workoutapp from "../../public/images/workoutapp.png";
 function Project(props) {
   return (
     <Box>

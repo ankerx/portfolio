@@ -4,7 +4,7 @@ function Project(props) {
   return (
     <Box>
       <ImageBox>
-        <a target="_blank" href={props.liveDemo}>
+        <a target="_blank" rel="noreferrer" href={props.liveDemo}>
           <Image
             src={props.src}
             alt="Picture of the website"

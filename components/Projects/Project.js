@@ -4,12 +4,14 @@ function Project(props) {
   return (
     <Box>
       <ImageBox>
-        <Image
-          src={props.src}
-          alt="Picture of the website"
-          width={520}
-          height={270}
-        />
+        <a target="_blank" href={props.liveDemo}>
+          <Image
+            src={props.src}
+            alt="Picture of the website"
+            width={520}
+            height={270}
+          />
+        </a>
       </ImageBox>
       <div>
         <Text>{props.desc}</Text>

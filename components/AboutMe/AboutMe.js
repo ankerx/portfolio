@@ -5,6 +5,7 @@ import sass from "./images/sass.png";
 import git from "./images/git.png";
 import react from "./images/react.png";
 import javascript from "./images/javascript.png";
+import typescript from "./images/typescript.png";
 import {
   StyledHeading,
   H3,
@@ -55,10 +56,10 @@ function AboutMe() {
               <Image src={css} alt="css" width={45} height={45} />
               <SkillText>CSS</SkillText>
             </SkillBox>
-            <SkillBox>
+            {/* <SkillBox>
               <Image src={sass} alt="sass" width={45} height={45} />
               <SkillText>SCSS</SkillText>
-            </SkillBox>
+            </SkillBox> */}
             <SkillBox>
               <Image src={javascript} alt="javascript" width={45} height={45} />
               <SkillText>Javascript</SkillText>
@@ -66,6 +67,10 @@ function AboutMe() {
             <SkillBox>
               <Image src={react} alt="react" width={45} height={45} />
               <SkillText>React</SkillText>
+            </SkillBox>
+            <SkillBox>
+              <Image src={typescript} alt="typescript" width={45} height={45} />
+              <SkillText>Typescript</SkillText>
             </SkillBox>
             <SkillBox>
               <Image src={git} alt="git" width={45} height={45} />

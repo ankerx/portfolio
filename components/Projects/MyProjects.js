@@ -4,6 +4,7 @@ import {
 } from "../../styles/globalStyles";
 import { Container, Section, StyledH2, StyledHeading } from "./styledProjects";
 import Project from "./Project";
+import { useState } from "react";
 
 function MyProjects({ posts }) {
   return (
@@ -16,14 +17,17 @@ function MyProjects({ posts }) {
       </StyledH2>
       <Container>
         {posts &&
-          posts.map((post) => (
-            <Project
-              key={post.id}
-              src={post.image.url}
-              desc={post.description}
-              link={post.link}
-            />
-          ))}
+          [...posts]
+            .reverse()
+            .map((post) => (
+              <Project
+                key={post.id}
+                src={post.image.url}
+                desc={post.description}
+                link={post.link}
+                liveDemo={post.liveDemo}
+              />
+            ))}
         {/* <Box>
           <ImageBox>
             <Image

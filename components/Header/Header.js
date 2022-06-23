@@ -27,7 +27,9 @@ function Header() {
           I take every website on next level!
         </StyledDescription>
         <Link href="/Projects">
-          <Button>See my projects</Button>
+          <a>
+            <Button>See my projects</Button>
+          </a>
         </Link>
       </Box>
     </StyledHeader>

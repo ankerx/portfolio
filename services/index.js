@@ -12,6 +12,7 @@ export const getPosts = async () => {
         }
         description
         link
+        liveDemo
       }
     }
   `;

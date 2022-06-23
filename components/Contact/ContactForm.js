@@ -16,7 +16,7 @@ import {
   StyledText,
   StyledTextArea,
   Section,
-} from "./StyledForm";
+} from "./styledForm";
 
 function ContactForm() {
   const [formErrors, setFormErrors] = useState({});

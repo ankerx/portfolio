@@ -2,11 +2,10 @@ import {
   BackgroundGradientBottom,
   BackgroundGradientTop,
 } from "../../styles/globalStyles";
-import { Container, Section, StyledH2, StyledHeading } from "./StyledProjects";
+import { Container, Section, StyledH2, StyledHeading } from "./styledProjects";
 import Project from "./Project";
 
 function MyProjects({ posts }) {
-  console.log(posts);
   return (
     <Section>
       <BackgroundGradientTop></BackgroundGradientTop>

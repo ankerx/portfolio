@@ -1,4 +1,4 @@
-import { Box, ImageBox, StyledLink, Text } from "./StyledProjects";
+import { Box, ImageBox, StyledLink, Text } from "./styledProjects";
 import Image from "next/image";
 function Project(props) {
   return (

@@ -116,19 +116,3 @@ function ContactForm() {
 }
 
 export default ContactForm;
-
-//emailjs
-// .sendForm(
-//   `service_hplfmds`,
-//   `template_9kh41ws`,
-//   // form.current,
-//   `3zUcfPz9ZJuYCasbt`
-// )
-// .then(
-//   (result) => {
-//     console.log(result.text);
-//   },
-//   (error) => {
-//     console.log(error.text);
-//   }
-// );

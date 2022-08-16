@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import Router from "next/router";
 import {

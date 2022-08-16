@@ -30,7 +30,8 @@ function Navbar({ theme, themeToggle }: IProps) {
         <StyledList>
           <StyledListItem
             style={{
-              background: router.pathname == "/" && "rgba(59, 130, 246, 1)",
+              background:
+                router.pathname === "/" ? "rgba(59, 130, 246, 1)" : "",
             }}
           >
             <Link href="/" passHref>
@@ -38,7 +39,7 @@ function Navbar({ theme, themeToggle }: IProps) {
                 <StyledFontAwesomeIcon
                   icon={faHome}
                   style={{
-                    color: router.pathname == "/" && "white",
+                    color: router.pathname === "/" ? "white" : "",
                   }}
                 />
               </StyledLink>
@@ -47,7 +48,7 @@ function Navbar({ theme, themeToggle }: IProps) {
           <StyledListItem
             style={{
               background:
-                router.pathname == "/Projects" && "rgba(59, 130, 246, 1)",
+                router.pathname === "/Projects" ? "rgba(59, 130, 246, 1)" : "",
             }}
           >
             <Link href="/Projects" passHref>
@@ -55,7 +56,7 @@ function Navbar({ theme, themeToggle }: IProps) {
                 <StyledFontAwesomeIcon
                   icon={faListCheck}
                   style={{
-                    color: router.pathname == "/Projects" && "white",
+                    color: router.pathname === "/Projects" ? "white" : "",
                   }}
                 />
               </StyledLink>
@@ -64,7 +65,7 @@ function Navbar({ theme, themeToggle }: IProps) {
           <StyledListItem
             style={{
               background:
-                router.pathname == "/About" && "rgba(59, 130, 246, 1)",
+                router.pathname === "/About" ? "rgba(59, 130, 246, 1)" : "",
             }}
           >
             <Link href="/About" passHref>
@@ -72,7 +73,7 @@ function Navbar({ theme, themeToggle }: IProps) {
                 <StyledFontAwesomeIcon
                   icon={faUser}
                   style={{
-                    color: router.pathname == "/About" && "white",
+                    color: router.pathname === "/About" ? "white" : "",
                   }}
                 />
               </StyledLink>
@@ -81,7 +82,7 @@ function Navbar({ theme, themeToggle }: IProps) {
           <StyledListItem
             style={{
               background:
-                router.pathname == "/Contact" && "rgba(59, 130, 246, 1)",
+                router.pathname === "/Contact" ? "rgba(59, 130, 246, 1)" : "",
             }}
           >
             <Link href="/Contact" passHref>
@@ -89,7 +90,7 @@ function Navbar({ theme, themeToggle }: IProps) {
                 <StyledFontAwesomeIcon
                   icon={faEnvelope}
                   style={{
-                    color: router.pathname == "/Contact" && "white",
+                    color: router.pathname === "/Contact" ? "white" : "",
                   }}
                 />
               </StyledLink>

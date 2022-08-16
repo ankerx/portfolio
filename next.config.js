@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ["media.graphassets.com"],
   },
+  env: {
+    graphCMS: "my value",
+  },
 };
 
 module.exports = nextConfig;

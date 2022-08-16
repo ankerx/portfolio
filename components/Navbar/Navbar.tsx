@@ -17,7 +17,11 @@ import {
   StyledListItem,
 } from "./styledNavbar";
 
-function Navbar({ theme, setTheme, themeToggle }) {
+interface IProps {
+  theme: string;
+  themeToggle: () => void;
+}
+function Navbar({ theme, themeToggle }: IProps) {
   const router = useRouter();
 
   return (
@@ -29,7 +33,7 @@ function Navbar({ theme, setTheme, themeToggle }) {
               background: router.pathname == "/" && "rgba(59, 130, 246, 1)",
             }}
           >
-            <Link href="/">
+            <Link href="/" passHref>
               <StyledLink>
                 <StyledFontAwesomeIcon
                   icon={faHome}
@@ -46,7 +50,7 @@ function Navbar({ theme, setTheme, themeToggle }) {
                 router.pathname == "/Projects" && "rgba(59, 130, 246, 1)",
             }}
           >
-            <Link href="/Projects">
+            <Link href="/Projects" passHref>
               <StyledLink>
                 <StyledFontAwesomeIcon
                   icon={faListCheck}
@@ -63,7 +67,7 @@ function Navbar({ theme, setTheme, themeToggle }) {
                 router.pathname == "/About" && "rgba(59, 130, 246, 1)",
             }}
           >
-            <Link href="/About">
+            <Link href="/About" passHref>
               <StyledLink>
                 <StyledFontAwesomeIcon
                   icon={faUser}
@@ -80,7 +84,7 @@ function Navbar({ theme, setTheme, themeToggle }) {
                 router.pathname == "/Contact" && "rgba(59, 130, 246, 1)",
             }}
           >
-            <Link href="/Contact">
+            <Link href="/Contact" passHref>
               <StyledLink>
                 <StyledFontAwesomeIcon
                   icon={faEnvelope}

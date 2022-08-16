@@ -1,7 +1,6 @@
 import Image from "next/image";
 import html from "./images/html.png";
 import css from "./images/css.png";
-import sass from "./images/sass.png";
 import git from "./images/git.png";
 import react from "./images/react.png";
 import javascript from "./images/javascript.png";

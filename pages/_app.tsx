@@ -6,7 +6,7 @@ import { lightTheme, darkTheme, GlobalStyles } from "../styles/themes";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ApolloProvider } from "@apollo/client";
-import { client } from "../services/apollo";
+import { client } from "../graphql/apollo";
 import { variants } from "../styles/animation-variants";
 import { AppProps } from "next/app";
 function MyApp({ Component, pageProps, router }: AppProps) {

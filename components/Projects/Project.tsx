@@ -1,7 +1,7 @@
 import { Box, ImageBox, StyledLink, Text } from "./styledProjects";
 import Image from "next/image";
 interface IProps {
-  [key: string]: string | null | undefined;
+  [key: string]: string;
 }
 function Project(props: IProps) {
   return (

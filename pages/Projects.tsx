@@ -1,8 +1,7 @@
 import AllProjects from "../components/Projects/AllProjects";
-import { gql } from "@apollo/client";
 import { GetProjectsQuery } from "../generated/graphql";
-import { client } from "../services/apollo";
-import { GET_PROJECTS } from "../components/graphql/query.graphql";
+import { client } from "../graphql/apollo";
+import { GET_PROJECTS } from "../graphql/query.graphql";
 
 function Projects({ projects }: GetProjectsQuery) {
   return (

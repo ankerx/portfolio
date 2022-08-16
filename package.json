@@ -6,27 +6,39 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "codegen:generate": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
+    "@apollo/client": "^3.6.9",
     "@emailjs/browser": "^3.6.2",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
+    "@hookform/resolvers": "^2.9.7",
+    "@types/react": "^18.0.17",
     "emailjs": "^4.0.0",
     "framer-motion": "^6.3.3",
     "graphql": "^16.5.0",
-    "graphql-request": "^4.2.0",
     "next": "12.1.5",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-hook-form": "^7.34.2",
     "styled-components": "^5.3.5",
-    "yarn": "^1.22.18"
+    "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "2.11.6",
+    "@graphql-codegen/introspection": "2.2.1",
+    "@graphql-codegen/typescript": "2.7.3",
+    "@graphql-codegen/typescript-operations": "2.5.3",
+    "@graphql-codegen/typescript-react-apollo": "3.3.3",
+    "@types/graphql": "^14.5.0",
+    "@types/styled-components": "^5.1.26",
     "babel-plugin-styled-components": "^2.0.7",
     "eslint": "8.14.0",
-    "eslint-config-next": "12.1.5"
+    "eslint-config-next": "12.1.5",
+    "typescript": "^4.7.4"
   }
 }

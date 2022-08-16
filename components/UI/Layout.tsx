@@ -1,7 +1,12 @@
 import Logo from "./Logo";
 import Navbar from "../Navbar/Navbar";
 
-function Layout({ children, themeToggle, theme }) {
+interface IProps {
+  theme: string;
+  themeToggle: () => void;
+  children: React.ReactNode;
+}
+function Layout({ children, themeToggle, theme }: IProps) {
   return (
     <div>
       <Logo />

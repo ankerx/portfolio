@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   position: relative;
   background: rgba(24, 138, 236, 1);
   padding: 0.8rem 1.6rem;
@@ -30,8 +30,3 @@ const StyledButton = styled.button`
     font-size: 1.1rem;
   }
 `;
-function Button({ children }) {
-  return <StyledButton>{children}</StyledButton>;
-}
-
-export default Button;

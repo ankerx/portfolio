@@ -17,7 +17,11 @@ import {
   StyledListItem,
 } from "./styledNavbar";
 
-function Navbar({ theme, setTheme, themeToggle }) {
+interface IProps {
+  theme: string;
+  themeToggle: () => void;
+}
+function Navbar({ theme, themeToggle }: IProps) {
   const router = useRouter();
 
   return (
@@ -26,15 +30,16 @@ function Navbar({ theme, setTheme, themeToggle }) {
         <StyledList>
           <StyledListItem
             style={{
-              background: router.pathname == "/" && "rgba(59, 130, 246, 1)",
+              background:
+                router.pathname === "/" ? "rgba(59, 130, 246, 1)" : "",
             }}
           >
-            <Link href="/">
+            <Link href="/" passHref>
               <StyledLink>
                 <StyledFontAwesomeIcon
                   icon={faHome}
                   style={{
-                    color: router.pathname == "/" && "white",
+                    color: router.pathname === "/" ? "white" : "",
                   }}
                 />
               </StyledLink>
@@ -43,15 +48,15 @@ function Navbar({ theme, setTheme, themeToggle }) {
           <StyledListItem
             style={{
               background:
-                router.pathname == "/Projects" && "rgba(59, 130, 246, 1)",
+                router.pathname === "/Projects" ? "rgba(59, 130, 246, 1)" : "",
             }}
           >
-            <Link href="/Projects">
+            <Link href="/Projects" passHref>
               <StyledLink>
                 <StyledFontAwesomeIcon
                   icon={faListCheck}
                   style={{
-                    color: router.pathname == "/Projects" && "white",
+                    color: router.pathname === "/Projects" ? "white" : "",
                   }}
                 />
               </StyledLink>
@@ -60,15 +65,15 @@ function Navbar({ theme, setTheme, themeToggle }) {
           <StyledListItem
             style={{
               background:
-                router.pathname == "/About" && "rgba(59, 130, 246, 1)",
+                router.pathname === "/About" ? "rgba(59, 130, 246, 1)" : "",
             }}
           >
-            <Link href="/About">
+            <Link href="/About" passHref>
               <StyledLink>
                 <StyledFontAwesomeIcon
                   icon={faUser}
                   style={{
-                    color: router.pathname == "/About" && "white",
+                    color: router.pathname === "/About" ? "white" : "",
                   }}
                 />
               </StyledLink>
@@ -77,15 +82,15 @@ function Navbar({ theme, setTheme, themeToggle }) {
           <StyledListItem
             style={{
               background:
-                router.pathname == "/Contact" && "rgba(59, 130, 246, 1)",
+                router.pathname === "/Contact" ? "rgba(59, 130, 246, 1)" : "",
             }}
           >
-            <Link href="/Contact">
+            <Link href="/Contact" passHref>
               <StyledLink>
                 <StyledFontAwesomeIcon
                   icon={faEnvelope}
                   style={{
-                    color: router.pathname == "/Contact" && "white",
+                    color: router.pathname === "/Contact" ? "white" : "",
                   }}
                 />
               </StyledLink>

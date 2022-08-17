@@ -99,3 +99,8 @@ export const StyledHeading = styled.h1`
     font-size: 1.8rem;
   }
 `;
+
+export const StyledLabel = styled.label`
+  display: flex;
+  flex-direction: column;
+`;

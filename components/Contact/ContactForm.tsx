@@ -18,6 +18,7 @@ import {
   StyledText,
   StyledTextArea,
   Section,
+  StyledLabel,
 } from "./styledForm";
 import { validationSchema } from "./validation-schema";
 
@@ -67,7 +68,7 @@ function ContactForm() {
           <>
             <StyledHeading>Contact me</StyledHeading>
             <StyledForm ref={form} onSubmit={handleSubmit(onSubmit)}>
-              <label>
+              <StyledLabel>
                 Name
                 <StyledInput
                   aria-invalid={errors.username ? "true" : "false"}
@@ -75,32 +76,32 @@ function ContactForm() {
                   type="text"
                   placeholder="Your name"
                 />
-              </label>
+              </StyledLabel>
               {errors.username && (
                 <StyledMessage role="alert">
                   {errors.username.message}
                 </StyledMessage>
               )}
-              <label>
+              <StyledLabel>
                 Email
                 <StyledInput
                   type="email"
                   {...register("email", { required: true })}
                   placeholder="Your mail"
                 />
-              </label>
+              </StyledLabel>
               {errors.email && (
                 <StyledMessage role="alert">
                   {errors.email.message}
                 </StyledMessage>
               )}
-              <label>
+              <StyledLabel>
                 Message
                 <StyledTextArea
                   {...register("message", { required: true })}
                   placeholder="Type your message"
                 />
-              </label>
+              </StyledLabel>
               {errors.message && (
                 <StyledMessage role="alert">
                   {errors.message.message}

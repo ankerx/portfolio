@@ -9,13 +9,30 @@ import { ApolloProvider } from "@apollo/client";
 import { client } from "../graphql/apollo";
 import { variants } from "../styles/animation-variants";
 import { AppProps } from "next/app";
+import Script from "next/script";
 function MyApp({ Component, pageProps, router }: AppProps) {
   const [theme, setTheme] = useState("light");
   const themeToggle = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
+
   return (
     <>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE}`}
+      />
+
+      <Script id="my-script" strategy="lazyOnload">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE}', {
+              page_path: window.location.pathname,
+            });
+                `}
+      </Script>
       <Head>
         <title>Sebx - Frontend Developer</title>
         <meta

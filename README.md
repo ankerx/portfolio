@@ -12,6 +12,7 @@ My portfolio where you can see my projects, read something about me and send me 
 | NextJS           |
 | Typescript       |
 | GraphQL          |
+| React-hook-form  |
 | HeadlessCMS      |
 | StyledComponents |
 | FramerMotion     |

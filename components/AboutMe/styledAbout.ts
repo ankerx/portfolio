@@ -7,7 +7,7 @@ export const StyledHeading = styled.h1`
 `;
 export const H3 = styled.h3`
   @media (min-width: 1024px) {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 `;
 export const TextBox = styled.div`
@@ -30,7 +30,13 @@ export const Container = styled.div`
   }
 `;
 export const Text = styled.p`
-  line-height: 1.4rem;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  font-weight: 200;
+`;
+export const H2 = styled.h2`
+  font-size: 1.2rem;
+  line-height: 2rem;
   font-weight: 200;
 `;
 export const SkillsBox = styled.div`

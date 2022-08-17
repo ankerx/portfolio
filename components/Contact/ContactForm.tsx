@@ -67,34 +67,40 @@ function ContactForm() {
           <>
             <StyledHeading>Contact me</StyledHeading>
             <StyledForm ref={form} onSubmit={handleSubmit(onSubmit)}>
-              <label>Name</label>
-              <StyledInput
-                aria-invalid={errors.username ? "true" : "false"}
-                {...register("username", { required: true })}
-                type="text"
-                placeholder="Your name"
-              />
+              <label>
+                Name
+                <StyledInput
+                  aria-invalid={errors.username ? "true" : "false"}
+                  {...register("username", { required: true })}
+                  type="text"
+                  placeholder="Your name"
+                />
+              </label>
               {errors.username && (
                 <StyledMessage role="alert">
                   {errors.username.message}
                 </StyledMessage>
               )}
-              <label>Email</label>
-              <StyledInput
-                type="email"
-                {...register("email", { required: true })}
-                placeholder="Your mail"
-              />
+              <label>
+                Email
+                <StyledInput
+                  type="email"
+                  {...register("email", { required: true })}
+                  placeholder="Your mail"
+                />
+              </label>
               {errors.email && (
                 <StyledMessage role="alert">
                   {errors.email.message}
                 </StyledMessage>
               )}
-              <label>Message</label>
-              <StyledTextArea
-                {...register("message", { required: true })}
-                placeholder="Type your message"
-              />
+              <label>
+                Message
+                <StyledTextArea
+                  {...register("message", { required: true })}
+                  placeholder="Type your message"
+                />
+              </label>
               {errors.message && (
                 <StyledMessage role="alert">
                   {errors.message.message}

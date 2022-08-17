@@ -24,7 +24,7 @@ function Header() {
         <StyledHeading>My name is Sebastian</StyledHeading>
         <StyledH1>I am Frontend Developer</StyledH1>
         <StyledDescription>
-          I take every website on next level!
+          I take every website to the next level!
         </StyledDescription>
         <Link href="/Projects">
           <a>

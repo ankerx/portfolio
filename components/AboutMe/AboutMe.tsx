@@ -1,10 +1,10 @@
 import Image from "next/image";
-import html from "./images/html.png";
-import css from "./images/css.png";
-import git from "./images/git.png";
-import react from "./images/react.png";
-import javascript from "./images/javascript.png";
-import typescript from "./images/typescript.png";
+import html from "../../assets/images/html.png";
+import css from "../../assets/images/css.png";
+import git from "../../assets/images/git.png";
+import react from "../../assets/images/react.png";
+import javascript from "../../assets/images/javascript.png";
+import typescript from "../../assets/images/typescript.png";
 import {
   StyledHeading,
   H3,
@@ -15,6 +15,7 @@ import {
   Text,
   Box,
   TextBox,
+  H2,
 } from "./styledAbout";
 import {
   BackgroundGradientBottom,
@@ -30,11 +31,11 @@ function AboutMe() {
       <StyledHeading>About me</StyledHeading>
       <Container>
         <TextBox>
-          <Text>
+          <H2>
             I am a Frontend Developer from Poland. I have a serious passion for
             making websites. I am learning new things every day and this is what
             I like the most in the programming world - you never stop learning.
-          </Text>
+          </H2>
         </TextBox>
         <TextBox>
           <Text>

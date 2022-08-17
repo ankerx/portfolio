@@ -35,7 +35,7 @@ function Navbar({ theme, themeToggle }: IProps) {
             }}
           >
             <Link href="/" passHref>
-              <StyledLink>
+              <StyledLink aria-label="home">
                 <StyledFontAwesomeIcon
                   icon={faHome}
                   style={{
@@ -52,7 +52,7 @@ function Navbar({ theme, themeToggle }: IProps) {
             }}
           >
             <Link href="/Projects" passHref>
-              <StyledLink>
+              <StyledLink aria-label="projects">
                 <StyledFontAwesomeIcon
                   icon={faListCheck}
                   style={{
@@ -69,7 +69,7 @@ function Navbar({ theme, themeToggle }: IProps) {
             }}
           >
             <Link href="/About" passHref>
-              <StyledLink>
+              <StyledLink aria-label="about me">
                 <StyledFontAwesomeIcon
                   icon={faUser}
                   style={{
@@ -86,7 +86,7 @@ function Navbar({ theme, themeToggle }: IProps) {
             }}
           >
             <Link href="/Contact" passHref>
-              <StyledLink>
+              <StyledLink aria-label="contact me">
                 <StyledFontAwesomeIcon
                   icon={faEnvelope}
                   style={{
@@ -97,12 +97,16 @@ function Navbar({ theme, themeToggle }: IProps) {
             </Link>
           </StyledListItem>
           <StyledListItem>
-            <StyledLink target="_blank" href="https://github.com/ankerx">
+            <StyledLink
+              target="_blank"
+              href="https://github.com/ankerx"
+              aria-label="my github"
+            >
               <StyledFontAwesomeIcon icon={faGithub} />
             </StyledLink>
           </StyledListItem>
           <StyledListItem>
-            <StyledLink onClick={themeToggle}>
+            <StyledLink onClick={themeToggle} aria-label="theme color switch">
               {theme !== "dark" ? (
                 <StyledFontAwesomeIcon icon={faMoon} />
               ) : (

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-const Text = styled.h2`
+import Link from "next/link";
+const StyledLink = styled.a`
   margin: 0.5rem 1rem;
   font-size: 2.2rem;
   font-family: "Yellowtail", cursive;
@@ -11,7 +11,11 @@ const Text = styled.h2`
   }
 `;
 function Logo() {
-  return <Text className="logo">Sebx.</Text>;
+  return (
+    <Link href="/" passHref>
+      <StyledLink className="logo">Sebx.</StyledLink>
+    </Link>
+  );
 }
 
 export default Logo;

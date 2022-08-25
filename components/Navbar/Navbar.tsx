@@ -48,15 +48,15 @@ function Navbar({ theme, themeToggle }: IProps) {
           <StyledListItem
             style={{
               background:
-                router.pathname === "/Projects" ? "rgba(59, 130, 246, 1)" : "",
+                router.pathname === "/projects" ? "rgba(59, 130, 246, 1)" : "",
             }}
           >
-            <Link href="/Projects" passHref>
+            <Link href="/projects" passHref>
               <StyledLink aria-label="projects">
                 <StyledFontAwesomeIcon
                   icon={faListCheck}
                   style={{
-                    color: router.pathname === "/Projects" ? "white" : "",
+                    color: router.pathname === "/projects" ? "white" : "",
                   }}
                 />
               </StyledLink>
@@ -65,15 +65,15 @@ function Navbar({ theme, themeToggle }: IProps) {
           <StyledListItem
             style={{
               background:
-                router.pathname === "/About" ? "rgba(59, 130, 246, 1)" : "",
+                router.pathname === "/about" ? "rgba(59, 130, 246, 1)" : "",
             }}
           >
-            <Link href="/About" passHref>
+            <Link href="/about" passHref>
               <StyledLink aria-label="about me">
                 <StyledFontAwesomeIcon
                   icon={faUser}
                   style={{
-                    color: router.pathname === "/About" ? "white" : "",
+                    color: router.pathname === "/about" ? "white" : "",
                   }}
                 />
               </StyledLink>
@@ -82,15 +82,15 @@ function Navbar({ theme, themeToggle }: IProps) {
           <StyledListItem
             style={{
               background:
-                router.pathname === "/Contact" ? "rgba(59, 130, 246, 1)" : "",
+                router.pathname === "/contact" ? "rgba(59, 130, 246, 1)" : "",
             }}
           >
-            <Link href="/Contact" passHref>
+            <Link href="/contact" passHref>
               <StyledLink aria-label="contact me">
                 <StyledFontAwesomeIcon
                   icon={faEnvelope}
                   style={{
-                    color: router.pathname === "/Contact" ? "white" : "",
+                    color: router.pathname === "/contact" ? "white" : "",
                   }}
                 />
               </StyledLink>

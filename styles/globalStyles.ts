@@ -40,3 +40,17 @@ export const Section = styled.section`
   padding-bottom: 8rem;
   text-align: center;
 `;
+
+export const SectionBlog = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 90vh;
+  padding: 0 1.5rem;
+  line-height: 1.8rem;
+  background: ${(props) => props.theme.body};
+  padding-bottom: 8rem;
+  @media (min-width: 1024px) {
+    padding: 0 20rem;
+  }
+`;

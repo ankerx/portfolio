@@ -8,7 +8,7 @@ interface IProps {
 }
 function Layout({ children, themeToggle, theme }: IProps) {
   return (
-    <div>
+    <div style={{ marginTop: "10px", marginLeft: "10px" }}>
       <Logo />
       {children}
       <Navbar themeToggle={themeToggle} theme={theme} />

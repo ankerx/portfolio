@@ -44,3 +44,36 @@ export const StyledH1 = styled.h1`
     margin-bottom: 3rem;
   }
 `;
+
+export const BTN = styled.button`
+  position: relative;
+  background: rgba(24, 138, 236, 1);
+  margin-right: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 8px;
+
+  &:after {
+    position: absolute;
+    z-index: 22;
+    content: "";
+    border: 1px solid rgba(24, 138, 236, 1);
+    border-radius: 8px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    left: 0;
+    bottom: 0;
+    transform: translate(12px, -12px);
+    transition: all 0.3s;
+  }
+  &:hover:after {
+    transform: translate(0);
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.1rem;
+  }
+`;

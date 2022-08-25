@@ -3,7 +3,6 @@ import {
   BackgroundGradientBottom,
   BackgroundGradientTop,
 } from "../../styles/globalStyles";
-import Button from "../UI/Button/Button";
 
 import {
   StyledHeader,
@@ -12,6 +11,7 @@ import {
   StyledHeading,
   StyledDescription,
   StyledH1,
+  BTN,
 } from "./styledHeader";
 
 function Header() {
@@ -20,15 +20,20 @@ function Header() {
       <BackgroundGradientTop></BackgroundGradientTop>
       <BackgroundGradientBottom></BackgroundGradientBottom>
       <Box>
-        <StyledText>Hello</StyledText>
+        <StyledText>Hello 👋</StyledText>
         <StyledHeading>My name is Sebastian</StyledHeading>
         <StyledH1>I am Frontend Developer</StyledH1>
         <StyledDescription>
           I take every website to the next level!
         </StyledDescription>
-        <Link href="/Projects">
+        <Link href="/projects">
           <a>
-            <Button>See my projects</Button>
+            <BTN>See my projects</BTN>
+          </a>
+        </Link>
+        <Link href="/blog">
+          <a>
+            <BTN>See my blog</BTN>
           </a>
         </Link>
       </Box>

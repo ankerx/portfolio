@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import AllProjects from "../components/Projects/AllProjects";
 import { GetProjectsQuery } from "../generated/graphql";
 import { client } from "../graphql/apollo";

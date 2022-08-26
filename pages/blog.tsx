@@ -3,7 +3,7 @@ import PostPreview from "../components/Posts/PostPreview";
 import { GetPostsQuery } from "../generated/graphql";
 import { client } from "../graphql/apollo";
 import { GET_POSTS } from "../graphql/query.graphql";
-import { Section, SectionBlog } from "../styles/globalStyles";
+import { Section } from "../styles/globalStyles";
 
 function Blog({ posts }: GetPostsQuery) {
   return (

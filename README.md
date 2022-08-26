@@ -2,7 +2,7 @@
 
 See the website: https://sebx.dev
 
-My portfolio and blog where you can see my projects, read my blog posts where I'm sharing things about web development or contact me.
+My portfolio and blog where you can see my projects, read my blog posts where I'm sharing things about web development or contact me. I hope you liked it!
 
 ## 📦 Technologies
 

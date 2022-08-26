@@ -1,19 +1,18 @@
-import AllPosts from "../components/Posts/AllPosts";
+import { StyledH1 } from "../components/Header/styledHeader";
 import PostPreview from "../components/Posts/PostPreview";
-import { GetPostsQuery, useGetPostsQuery } from "../generated/graphql";
+import { GetPostsQuery } from "../generated/graphql";
 import { client } from "../graphql/apollo";
 import { GET_POSTS } from "../graphql/query.graphql";
+import { Section, SectionBlog } from "../styles/globalStyles";
 
 function Blog({ posts }: GetPostsQuery) {
-  // console.log(posts);
-  // if (!posts) return <p>loading...</p>;
   return (
-    <div>
-      <h1>All my blog posts</h1>
+    <Section>
+      <StyledH1>All my blog posts</StyledH1>
       {posts.map((post) => {
         return <PostPreview key={post.id} post={post} />;
       })}
-    </div>
+    </Section>
   );
 }
 

@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ImageBox } from "../Projects/styledProjects";
+import { H2, StyledBox, StyledText, TextContainer } from "./styledPosts";
 
 interface IPost {
   post: {
@@ -21,17 +23,21 @@ interface IPost {
 
 export default function PostPreview({ post }: IPost) {
   return (
-    <div>
-      <Image
-        src={post.cover_image?.url || ""}
-        width={200}
-        height={200}
-        alt="blog post"
-      />
-      <Link href={`/post/${post.slug}`} passHref>
-        <h3>{post.title}</h3>
-      </Link>
-      <p>{post.excerpt}</p>
-    </div>
+    <Link href={`/post/${post.slug}`} passHref>
+      <StyledBox>
+        <Image
+          src={post.cover_image?.url || ""}
+          width={300}
+          height={200}
+          objectFit="cover"
+          alt="blog post"
+        />
+        <TextContainer>
+          <H2>{post.title}</H2>
+          <StyledText>{post.excerpt}</StyledText>
+          <p>Read more</p>
+        </TextContainer>
+      </StyledBox>
+    </Link>
   );
 }

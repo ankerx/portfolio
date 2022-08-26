@@ -46,11 +46,13 @@ export const SectionBlog = styled.section`
   flex-direction: column;
   align-items: center;
   min-height: 90vh;
-  padding: 0 1.5rem;
+  padding: 1.5rem;
+  padding-bottom: 10rem;
   line-height: 1.8rem;
   background: ${(props) => props.theme.body};
-  padding-bottom: 8rem;
+
   @media (min-width: 1024px) {
     padding: 0 20rem;
+    padding-bottom: 10rem;
   }
 `;

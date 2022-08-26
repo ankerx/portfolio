@@ -41,6 +41,7 @@ export const ImageBox = styled.div`
   border: 1px solid rgba(24, 138, 236, 1);
   /* position: relative; */
   box-shadow: 0.5rem 0.5rem 0.4rem 0.4rem rgba(24, 138, 236, 0.1);
+  cursor: pointer;
 `;
 export const Text = styled.p`
   font-size: 0.8rem;

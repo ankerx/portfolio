@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Link from "next/link";
 const StyledLink = styled.a`
   margin: 0.5rem 1rem;
-  padding-top: 10rem;
   font-size: 2.2rem;
   font-family: "Yellowtail", cursive;
   font-weight: 400;

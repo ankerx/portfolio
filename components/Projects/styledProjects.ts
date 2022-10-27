@@ -34,6 +34,7 @@ export const Box = styled.div`
   width: 100%;
   @media (min-width: 1024px) {
     flex-direction: row;
+    margin-top: 4rem;
   }
 `;
 
@@ -95,8 +96,8 @@ export const StyledLink = styled.a`
   }
 `;
 
-export const Div = styled.div`
+export const Div = styled.div<{ index: boolean }>`
   @media (min-width: 1024px) {
-    order: -1;
+    order: ${(p) => (p.index ? -1 : 1)};
   }
 `;

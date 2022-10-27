@@ -7,6 +7,7 @@ import Project from "./Project";
 import { GetProjectsQuery } from "../../generated/graphql";
 
 function AllProjects({ projects }: GetProjectsQuery) {
+  if (!projects) return <p>Failed to fetch the projects.</p>;
   return (
     <Section>
       <BackgroundGradientTop></BackgroundGradientTop>
@@ -19,8 +20,9 @@ function AllProjects({ projects }: GetProjectsQuery) {
         {projects &&
           [...projects]
             .reverse()
-            .map((post) => (
+            .map((post, index) => (
               <Project
+                index={index % 2 === 1}
                 key={post.id}
                 src={post?.image?.url}
                 desc={post.description}

@@ -1,10 +1,11 @@
-import { Box, ImageBox, StyledLink, Text } from "./styledProjects";
+import { Box, ImageBox, StyledLink, Text, Div } from "./styledProjects";
 import Image from "next/image";
 interface IProps {
   desc?: string | null;
   link?: string | null;
   liveDemo?: string | null;
   src?: string | null;
+  index: boolean;
 }
 function Project(props: IProps) {
   return (
@@ -19,12 +20,12 @@ function Project(props: IProps) {
           />
         </a>
       </ImageBox>
-      <div>
+      <Div index={props.index}>
         <Text>{props.desc}</Text>
         <StyledLink target="_blank" href={props.link || ""}>
           View more
         </StyledLink>
-      </div>
+      </Div>
     </Box>
   );
 }

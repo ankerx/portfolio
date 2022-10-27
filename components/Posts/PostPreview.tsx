@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ImageBox } from "../Projects/styledProjects";
+
 import { H2, StyledBox, StyledText, TextContainer } from "./styledPosts";
 
 interface IPost {

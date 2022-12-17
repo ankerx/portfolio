@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         <title>Sebx - Frontend Developer</title>
         <meta
           name="description"
-          content="This is a desription for My Next App"
+          content="My personal website and blog"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

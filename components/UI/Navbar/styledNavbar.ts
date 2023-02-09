@@ -43,8 +43,6 @@ export const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
     width: 1.5rem;
     height: 1.5rem;
   }
-  @media (min-width: 1024px) {
-  }
 `;
 export const StyledLink = styled.a`
   display: flex;
@@ -52,6 +50,15 @@ export const StyledLink = styled.a`
   justify-content: center;
   width: 2rem;
   color: ${(props) => props.theme.fontColor};
+`;
+export const StyledButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  color: ${(props) => props.theme.fontColor};
+  border: none;
+  background: none;
 `;
 
 export const StyledList = styled.ul`

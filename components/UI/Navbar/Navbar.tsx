@@ -11,6 +11,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   Nav,
+  StyledButton,
   StyledFontAwesomeIcon,
   StyledLink,
   StyledList,
@@ -52,7 +53,7 @@ function Navbar({ theme, themeToggle }: IProps) {
             }}
           >
             <Link href="/projects" passHref>
-              <StyledLink aria-label="projects">
+              <StyledLink aria-label="go to projects page">
                 <StyledFontAwesomeIcon
                   icon={faListCheck}
                   style={{
@@ -69,7 +70,7 @@ function Navbar({ theme, themeToggle }: IProps) {
             }}
           >
             <Link href="/about" passHref>
-              <StyledLink aria-label="about me">
+              <StyledLink aria-label="go to about page">
                 <StyledFontAwesomeIcon
                   icon={faUser}
                   style={{
@@ -86,7 +87,7 @@ function Navbar({ theme, themeToggle }: IProps) {
             }}
           >
             <Link href="/contact" passHref>
-              <StyledLink aria-label="contact me">
+              <StyledLink aria-label="go to contact page">
                 <StyledFontAwesomeIcon
                   icon={faEnvelope}
                   style={{
@@ -100,19 +101,19 @@ function Navbar({ theme, themeToggle }: IProps) {
             <StyledLink
               target="_blank"
               href="https://github.com/ankerx"
-              aria-label="my github"
+              aria-label="visit my GitHub profile"
             >
               <StyledFontAwesomeIcon icon={faGithub} />
             </StyledLink>
           </StyledListItem>
           <StyledListItem>
-            <StyledLink onClick={themeToggle} aria-label="theme color switch">
+            <StyledButton onClick={themeToggle} aria-label="theme switch">
               {theme !== "dark" ? (
                 <StyledFontAwesomeIcon icon={faMoon} />
               ) : (
                 <StyledFontAwesomeIcon icon={faSun} />
               )}
-            </StyledLink>
+            </StyledButton>
           </StyledListItem>
         </StyledList>
       </Nav>

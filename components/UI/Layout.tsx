@@ -1,5 +1,10 @@
+import styled from "styled-components";
+import {
+  BackgroundGradientBottom,
+  BackgroundGradientTop,
+} from "../../styles/globalStyles";
 import Logo from "./Logo";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "./Navbar/Navbar";
 
 interface IProps {
   theme: string;
@@ -8,12 +13,21 @@ interface IProps {
 }
 function Layout({ children, themeToggle, theme }: IProps) {
   return (
-    <div style={{ marginTop: "10px", marginLeft: "10px" }}>
+    <Box>
       <Logo />
-      {children}
+      <main>
+        <BackgroundGradientTop />
+        <BackgroundGradientBottom />
+        {children}
+      </main>
       <Navbar themeToggle={themeToggle} theme={theme} />
-    </div>
+    </Box>
   );
 }
 
 export default Layout;
+
+const Box = styled.div`
+  margin-top: 10px;
+  margin-left: 10px;
+`;

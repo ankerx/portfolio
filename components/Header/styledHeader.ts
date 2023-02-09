@@ -20,17 +20,20 @@ export const StyledText = styled.p`
     font-size: 1.6rem;
   }
 `;
-export const StyledHeading = styled.h2`
-  font-size: 1.7rem;
+export const StyledHeading = styled.p`
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 0;
   @media (min-width: 1024px) {
-    font-size: 2.1rem;
+    font-size: 2rem;
   }
 `;
 
-export const StyledDescription = styled.h3`
+export const StyledDescription = styled.h2`
   font-size: 1rem;
   font-weight: 300;
   margin-bottom: 3rem;
+  line-height: 1.6;
   @media (min-width: 1024px) {
     font-size: 1.3rem;
   }

@@ -10,8 +10,6 @@ function AllProjects({ projects }: GetProjectsQuery) {
   if (!projects) return <p>Failed to fetch the projects.</p>;
   return (
     <Section>
-      <BackgroundGradientTop></BackgroundGradientTop>
-      <BackgroundGradientBottom></BackgroundGradientBottom>
       <StyledHeading>Projects</StyledHeading>
       <StyledH2>
         Some of the projects that I have been working on last time

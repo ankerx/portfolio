@@ -41,10 +41,15 @@ export const H2 = styled.h2`
 `;
 export const SkillsBox = styled.div`
   display: flex;
-  justify-content: space-between;
   margin-top: 1rem;
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  @media screen and (min-width: 1024px) {
+    gap: 30px;
+  }
 `;
 export const SkillBox = styled.div`
   min-width: 3.2rem;

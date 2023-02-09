@@ -17,24 +17,19 @@ import {
 function Header() {
   return (
     <StyledHeader>
-      <BackgroundGradientTop></BackgroundGradientTop>
-      <BackgroundGradientBottom></BackgroundGradientBottom>
       <Box>
         <StyledText>Hello 👋</StyledText>
         <StyledHeading>My name is Sebastian</StyledHeading>
-        <StyledH1>I am Frontend Developer</StyledH1>
+        <StyledH1>I am a Fullstack Developer</StyledH1>
         <StyledDescription>
-          I take every website to the next level!
+          Pushing web to the next level with Web3 <br /> and Fullstack
+          Development Expertise
         </StyledDescription>
-        <Link href="/projects">
-          <a>
-            <BTN>See my projects</BTN>
-          </a>
+        <Link href="/projects" passHref>
+          <BTN>See my projects</BTN>
         </Link>
-        <Link href="/blog">
-          <a>
-            <BTN>See my blog</BTN>
-          </a>
+        <Link href="/blog" passHref>
+          <BTN>See my blog</BTN>
         </Link>
       </Box>
     </StyledHeader>

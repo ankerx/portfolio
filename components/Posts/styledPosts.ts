@@ -9,10 +9,20 @@ export const StyledBox = styled.div`
   cursor: pointer;
   border: 1px solid rgba(24, 138, 236, 1);
   box-shadow: 0.5rem 0.5rem 0.4rem 0.4rem rgba(24, 138, 236, 0.1);
+  transition: all 0.3s;
   @media (min-width: 1024px) {
     width: 70vw;
     flex-direction: row;
     margin: 2.5rem 6rem;
+  }
+  &:hover {
+    transform: scale(0.98);
+  }
+`;
+export const Paragraph = styled.div`
+  transition: all 0.3s;
+  &:hover {
+    color: rgba(24, 138, 236, 1);
   }
 `;
 export const TextContainer = styled.div`

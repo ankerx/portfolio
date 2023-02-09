@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { H2, StyledBox, StyledText, TextContainer } from "./styledPosts";
+import {
+  H2,
+  Paragraph,
+  StyledBox,
+  StyledText,
+  TextContainer,
+} from "./styledPosts";
 
 interface IPost {
   post: {
@@ -35,7 +41,7 @@ export default function PostPreview({ post }: IPost) {
         <TextContainer>
           <H2>{post.title}</H2>
           <StyledText>{post.excerpt}</StyledText>
-          <p>Read more</p>
+          <Paragraph>Read more</Paragraph>
         </TextContainer>
       </StyledBox>
     </Link>

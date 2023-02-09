@@ -3,10 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import emailjs from "@emailjs/browser";
 import Router from "next/router";
-import {
-  BackgroundGradientBottom,
-  BackgroundGradientTop,
-} from "../../styles/globalStyles";
+
 import {
   Box,
   Container,
@@ -61,8 +58,6 @@ function ContactForm() {
 
   return (
     <Section>
-      <BackgroundGradientTop></BackgroundGradientTop>
-      <BackgroundGradientBottom></BackgroundGradientBottom>
       <Container>
         {!isSubmit ? (
           <>

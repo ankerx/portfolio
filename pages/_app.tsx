@@ -10,6 +10,7 @@ import { client } from "../graphql/apollo";
 import { variants } from "../styles/animation-variants";
 import { AppProps } from "next/app";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 function MyApp({ Component, pageProps, router }: AppProps) {
   const [theme, setTheme] = useState("light");
   const themeToggle = () => {
@@ -35,10 +36,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       </Script>
       <Head>
         <title>Sebx - Frontend Developer</title>
-        <meta
-          name="description"
-          content="My personal website and blog"
-        />
+        <meta name="description" content="My personal website and blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ApolloProvider client={client}>
@@ -59,6 +57,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                 transition={{ type: "linear" }}
               >
                 <Component {...pageProps} />
+
+                <Analytics />
               </motion.div>
             </AnimatePresence>
           </Layout>
